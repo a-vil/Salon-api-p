@@ -223,3 +223,9 @@ Ver `render.yaml` para la configuracion completa.
 - Rate limiting
 - Documentacion mejorada del flujo de canjes
 - Mejoras de concurrencia
+
+## Licencia
+
+Este proyecto usa **PolyForm Noncommercial License 1.0.0**: puedes ver, probar,
+modificar y aprender del código libremente, pero no se permite su uso con
+fines comerciales. Ver [LICENSE](./LICENSE) para el texto completo.
