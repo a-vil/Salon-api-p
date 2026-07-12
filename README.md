@@ -1,6 +1,12 @@
 # Mini Salon API
 
-**Python 3.12** · **FastAPI** · **SQLAlchemy** · **PostgreSQL** · **JWT** · **Alembic** · **Render**
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?logo=fastapi&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-red?logo=sqlalchemy&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![Alembic](https://img.shields.io/badge/Alembic-Migrations-purple)
+![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
+![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?logo=render&logoColor=white)
 
 Backend del sistema de fidelidad para un salón de belleza. Los clientes se registran, acumulan puntos por consumos y los canjean por recompensas. Los administradores gestionan clientes, puntos, recompensas y canjes.
 
@@ -22,6 +28,22 @@ Backend del sistema de fidelidad para un salón de belleza. Los clientes se regi
 | Contrasenas | Passlib + bcrypt |
 | Documentacion | fastapi-swagger-dark |
 | Despliegue | Render (web service + PostgreSQL) |
+
+---
+
+## Estructura del proyecto
+
+```
+app/
+├── core/         # Configuracion, seguridad, dependencias
+├── models/       # Modelos SQLAlchemy (Usuario, Cliente, CuentaPuntos, etc.)
+├── routers/      # Endpoints por dominio (auth, clientes, puntos, recompensas, canjes)
+├── schemas/      # Pydantic schemas para request/response
+└── main.py       # Entry point de la API
+alembic/          # Migraciones de base de datos
+scripts/          # Utilidades (seed, crear admin)
+tests/            # Tests automatizados (pytest)
+```
 
 ---
 
