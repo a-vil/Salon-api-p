@@ -7,6 +7,7 @@
 ![Alembic](https://img.shields.io/badge/Alembic-Migrations-purple)
 ![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
 ![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?logo=render&logoColor=white)
+[![Tests](https://github.com/a-vil/Salon-api-p/actions/workflows/tests.yml/badge.svg)](https://github.com/a-vil/Salon-api-p/actions/workflows/tests.yml)
 
 Backend del sistema de fidelidad para un salón de belleza. Los clientes se registran, acumulan puntos por consumos y los canjean por recompensas. Los administradores gestionan clientes, puntos, recompensas y canjes.
 
