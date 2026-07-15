@@ -7,9 +7,7 @@ services:
     startCommand: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: DATABASE_URL
-        fromDatabase:
-          name: mini-salon-db
-          property: connectionString
+        value: set-me-in-render-dashboard
       - key: SECRET_KEY
         generateValue: true
       - key: ALGORITHM
@@ -29,6 +27,3 @@ services:
       - key: CORS_ORIGINS
         value: http://localhost:5173,http://127.0.0.1:5173
 
-databases:
-  - name: mini-salon-db
-    plan: free

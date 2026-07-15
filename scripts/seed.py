@@ -52,6 +52,7 @@ def main():
             estado="activa",
         )
         db.add(cuenta)
+        db.flush()
 
         cliente_usuario = Usuario(
             correo="cliente@example.com",
