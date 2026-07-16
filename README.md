@@ -223,7 +223,7 @@ Ver `render.yaml` para la configuracion completa.
 
 ## Roadmap
 
-- Recuperacion de acceso (olvido de contrasena)
+- Recuperacion de acceso (olvido de contraseña)
 - Rate limiting
 - Documentacion mejorada del flujo de canjes
 - Mejoras de concurrencia
