@@ -8,6 +8,7 @@
 ![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
 ![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?logo=render&logoColor=white)
 [![Tests](https://github.com/a-vil/Salon-api-p/actions/workflows/tests.yml/badge.svg)](https://github.com/a-vil/Salon-api-p/actions/workflows/tests.yml)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm%20Noncommercial-blue.svg)](./LICENSE)
 
 Backend del sistema de fidelidad para un salón de belleza. Los clientes se registran, acumulan puntos por consumos y los canjean por recompensas. Los administradores gestionan clientes, puntos, recompensas y canjes.
 
@@ -28,7 +29,7 @@ Backend del sistema de fidelidad para un salón de belleza. Los clientes se regi
 | Autenticacion | JWT (PyJWT) + sesiones con hash SHA-256 |
 | Contrasenas | Passlib + bcrypt |
 | Documentacion | fastapi-swagger-dark |
-| Despliegue | Render (web service + PostgreSQL) |
+| Despliegue | Render (web service) + Neon (PostgreSQL) |
 
 ---
 
@@ -175,6 +176,8 @@ La API estara disponible en `http://localhost:8000`.
 | `SESSION_EXPIRE_MINUTES` | No | `480` | Duracion de sesion (8 horas) |
 | `SESSION_COOKIE_NAME` | No | `mini_salon_session` | Nombre de la cookie de sesion |
 | `CORS_ORIGINS` | No | `http://localhost:5173` | Origenes permitidos (separados por coma) |
+| `SESSION_COOKIE_SECURE` | No | `false` | Cookie solo por HTTPS (`true` en produccion) |
+| `SESSION_COOKIE_SAMESITE` | No | `lax` | Control de cookie cross-site (`lax`, `strict`, `none`) |
 
 ---
 
@@ -208,10 +211,10 @@ python -m pytest tests/ -v
 
 ## Despliegue
 
-El proyecto esta configurado para desplegarse en **Render**:
+El proyecto esta configurado para desplegarse en **Render** + **Neon**:
 
 - **Web service**: Python, comando `alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-- **Base de datos**: PostgreSQL (plan free)
+- **Base de datos**: Neon (PostgreSQL serverless, escala a cero)
 - **Frontend**: Repositorio separado (React). La URL del frontend se configura via `CORS_ORIGINS`.
 
 Ver `render.yaml` para la configuracion completa.
