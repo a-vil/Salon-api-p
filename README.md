@@ -1,4 +1,4 @@
-# Mini Salon API
+# Sistema de Fidelizacion - API
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?logo=fastapi&logoColor=white)
@@ -174,7 +174,7 @@ La API estara disponible en `http://localhost:8000`.
 | `ACCESS_TOKEN_EXPIRE_MINUTES` | No | `60` | Tiempo de expiracion del token |
 | `ENABLE_DOCS` | No | `true` | Habilita Swagger UI |
 | `SESSION_EXPIRE_MINUTES` | No | `480` | Duracion de sesion (8 horas) |
-| `SESSION_COOKIE_NAME` | No | `mini_salon_session` | Nombre de la cookie de sesion |
+| `SESSION_COOKIE_NAME` | No | `sis-fidel-session` | Nombre de la cookie de sesion |
 | `CORS_ORIGINS` | No | `http://localhost:5173` | Origenes permitidos (separados por coma) |
 | `SESSION_COOKIE_SECURE` | No | `false` | Cookie solo por HTTPS (`true` en produccion) |
 | `SESSION_COOKIE_SAMESITE` | No | `lax` | Control de cookie cross-site (`lax`, `strict`, `none`) |

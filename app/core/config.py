@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     enable_docs: bool = Field(default=True, alias="ENABLE_DOCS")
     session_expire_minutes: int = Field(default=480, alias="SESSION_EXPIRE_MINUTES")
     session_cookie_name: str = Field(
-        default="mini_salon_session",
+        default="sis-fidel-session",
         alias="SESSION_COOKIE_NAME",
     )
     session_cookie_secure: bool = Field(default=False, alias="SESSION_COOKIE_SECURE")

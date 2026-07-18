@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: mini-salon-back
+    name: sis-fide-api
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
@@ -19,7 +19,7 @@ services:
       - key: SESSION_EXPIRE_MINUTES
         value: 480
       - key: SESSION_COOKIE_NAME
-        value: mini_salon_session
+        value: sis-fidel-session
       - key: SESSION_COOKIE_SECURE
         value: true
       - key: SESSION_COOKIE_SAMESITE

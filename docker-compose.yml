@@ -4,13 +4,13 @@ services:
   db:
     image: postgres:16
     environment:
-      POSTGRES_DB: mini_salon
+      POSTGRES_DB: sis-fidel
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d mini_salon"]
+      test: ["CMD-SHELL", "pg_isready -U postgres -d sis-fidel"]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -20,7 +20,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql://postgres:postgres@db:5432/mini_salon
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/sis-fidel
       SECRET_KEY: clave_para_desarrollo_1234567890123456
       CORS_ORIGINS: http://localhost:5173,http://127.0.0.1:5173
       SESSION_COOKIE_SECURE: "false"

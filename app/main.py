@@ -11,7 +11,7 @@ from app.routers.rewards import router as rewards_router
 from app.routers.auth import router as auth_router
 
 app = FastAPI(
-    title="Mini Salon API",
+    title="Sistema de Fidelizacion - API",
     version="0.1.0",
     docs_url=None,
     redoc_url=None,
